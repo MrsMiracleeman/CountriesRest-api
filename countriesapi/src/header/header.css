@@ -10,12 +10,13 @@
 .Header p{
     font-weight: bold;
     padding: 0px;
+    margin: 0px;
 }
 
 /*                                         DESKTOP VIEW                                             */
 
 
-@media (min-width:768px) {
+@media (min-width:700px) {
 
     .Header{
         font-size: 0.9rem;

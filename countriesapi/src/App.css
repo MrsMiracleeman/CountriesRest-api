@@ -9,6 +9,19 @@
   'Footer';
 }
 
+@media (min-width: 700px) {
+  .App {
+    display: grid;
+    width: 100%;
+    min-height: 100vh;
+    grid-template-rows: 12vh 82vh 6vh;
+    grid-template-areas: 
+    'Header'
+    'Main'
+    'Footer';
+  }
+}
+
 
 
 

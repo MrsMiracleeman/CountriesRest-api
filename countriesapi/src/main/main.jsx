@@ -1,5 +1,6 @@
 import React from "react";
 import Busca from "./busca/busca";
+import Filtros from "./filtros/filtros";
 import './main.css'
 
 export default props=>{
@@ -9,7 +10,7 @@ export default props=>{
                 <Busca />
             </div>
             <div id="filtros">
-                
+                <Filtros />
             </div>
             <section id="lista">
 

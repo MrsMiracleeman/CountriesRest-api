@@ -1,0 +1,30 @@
+.dropdown{
+    background-color: rgba(255, 255, 255, 0);
+}
+.dropdown button{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border: none;
+    padding: 8px 0px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.158);
+    font-size: 0.8rem;
+    color: gray;
+}
+.dropdown button i{
+    color: gray;
+    margin-top: 2px;
+}
+.drop{
+    margin-top: 5px;
+    border-radius: 10px;
+    border: none;
+    visibility: hidden;
+    position: absolute;
+    width: 100%;
+}
+.on{
+    visibility: visible;
+}

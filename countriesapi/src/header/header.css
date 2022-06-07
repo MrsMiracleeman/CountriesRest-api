@@ -1,0 +1,32 @@
+/*                                             MOBILE VIEW                                      */               
+.Header{
+    grid-area: Header;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 15px;
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.158);
+}
+.Header p{
+    font-weight: bold;
+    padding: 0px;
+}
+
+/*                                         DESKTOP VIEW                                             */
+
+
+@media (min-width:768px) {
+
+    .Header{
+        font-size: 0.9rem;
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: 10% 70% 20%;
+        box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.158);
+        padding: 0px;
+    }
+    #Header-title{
+        grid-column-start: 2;
+    }
+    
+}

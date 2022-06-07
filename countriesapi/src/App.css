@@ -1,0 +1,18 @@
+.App {
+  display: grid;
+  width: 100%;
+  min-height: 100vh;
+  grid-template-rows: 10vh 85vh 5vh;
+  grid-template-areas: 
+  'Header'
+  'Main'
+  'Footer';
+}
+
+
+
+
+
+
+
+

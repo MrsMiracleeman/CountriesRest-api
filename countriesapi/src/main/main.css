@@ -1,0 +1,38 @@
+/*                                    MOBILE VIEW                                                   */
+.Main{
+    background-color: rgba(128, 128, 128, 0.089);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 15px;
+}
+
+#buscar{
+    display: flex;
+    justify-content: center;
+    background-color: aqua;
+    width: 100%;
+    background-color: white;
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.158);
+    border-radius: 5px;
+}
+
+
+
+/*                                    DESKTOP VIEW                                                  */
+
+@media (min-width:768px) {
+    .Main{
+        background-color: rgba(128, 128, 128, 0.089);
+        grid-area: Main;
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: 10% 70% 20%;
+    }
+    .Main div{
+        grid-column-start: 2;
+       
+    }
+}
+
+

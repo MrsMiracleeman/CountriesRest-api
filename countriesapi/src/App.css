@@ -1,24 +1,28 @@
 .App {
-  display: grid;
+  /* display: grid;
   width: 100%;
   min-height: 100vh;
-  grid-template-rows: 10vh 85vh 5vh;
+  height: 100%;
+  grid-template-rows: calc(15vh+1fr) calc(85vh+1fr) 1fr;
   grid-template-areas: 
   'Header'
   'Main'
-  'Footer';
+  'Footer'; */
 }
 
 @media (min-width: 700px) {
   .App {
-    display: grid;
+    /* display: grid;
     width: 100%;
     min-height: 100vh;
-    grid-template-rows: 12vh 82vh 6vh;
+    grid-template-rows: 12vh 82vh 1vh;
     grid-template-areas: 
     'Header'
     'Main'
-    'Footer';
+    'Footer'; */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
   }
 }
 

@@ -1,0 +1,18 @@
+#Cards{
+    margin-top: 35px;
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.336);
+}
+#Cards img{
+    width: 100%;
+}
+#Cards ul{
+    margin-top: 10px;
+    list-style: none;
+}
+#Cards ul li{
+    padding: 3px 0px;
+}

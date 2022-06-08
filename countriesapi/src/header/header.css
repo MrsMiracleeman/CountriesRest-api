@@ -1,6 +1,7 @@
 /*                                             MOBILE VIEW                                      */               
 .Header{
     grid-area: Header;
+    height: 12vh;
     display: flex;
     align-items: center;
     justify-content: space-between;

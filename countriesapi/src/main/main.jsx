@@ -13,27 +13,28 @@ export default props=>{
 
         axios.get('https://restcountries.com/v3.1/all')
         .then(resposta=>{
-            // console.log(resposta.data[0].flags.png)
-            // console.log(resposta.data[0].name.common)
-            // console.log(resposta.data[0].population)
-            // console.log(resposta.data[0].region)
-            // console.log(resposta.data[0].capital)
+            
             filterHome(resposta.data)
+        
         })
 
-  
+        
         function filterHome(paises){
+            
             paises.forEach(element => {
-                if(element.name.common === "Germany" || element.name.common === "Brazil" ||
-                    element.name.common === "United States of America" || element.name.common === "Iceland"
-                    || element.name.common === "Afghanistan" || element.name.common === "Argentina" ||
-                    element.name.common === "Albania" || element.name.common === "Algeria"
+                if(element.name.common === "Russia" || element.name.common === "Brazil" || element.name.common === "Iceland"
+                    || element.name.common === "United States" || element.name.common === "Argentina" ||element.name.common === "Mexico" ||
+                    element.name.common === "Albania" || element.name.common === "Algeria" || element.name.common === "Cuba" || element.name.common === "Greece"
                 ){
                     list.push(element)
-                    setPais(list)
+                
                 }
+
             });
 
+            if(list.length === 10){
+                setPais(list)
+            }
         }
 
     if(pais.length >= 0){

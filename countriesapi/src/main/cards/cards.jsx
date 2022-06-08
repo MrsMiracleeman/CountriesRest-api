@@ -25,7 +25,7 @@ export default class Cards extends Component{
                     <img src={this.state.img}/>
                 </div>
                 <ul>
-                    <h2>{this.state.nome} </h2>
+                    <h6>{this.state.nome} </h6>
                     <li><strong>População: </strong>{this.state.populacao} </li>
                     <li><strong>Região: </strong> {this.state.regiao} </li>
                     <li><strong>Capital: </strong>{this.state.capital}</li>

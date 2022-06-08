@@ -1,4 +1,14 @@
 .Footer{
-    background-color: red;
+    padding: 0px;
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(128, 128, 128, 0.089);
     grid-area: Footer;
+}
+.Footer i{
+    color: rgba(255, 0, 0, 0.76);
+}
+.Footer h6{
+    font-size: 0.8rem;
 }

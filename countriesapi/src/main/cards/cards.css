@@ -1,13 +1,20 @@
+/*                                        DESKTOP VIEW                                           */
 #Cards{
     margin-top: 35px;
     background-color: white;
     border-radius: 5px;
     display: flex;
+    margin-right: 5px;
     flex-direction: column;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.336);
+    width: 18%;
+}
+#Cards div{
+    height: 60%;
 }
 #Cards img{
     width: 100%;
+    height: 100%;
 }
 #Cards ul{
     margin-top: 10px;
@@ -15,4 +22,20 @@
 }
 #Cards ul li{
     padding: 3px 0px;
+    font-size: 0.8rem;
+}
+
+/*                                          MOBILE VIEW                                            */  
+
+@media (max-width:770px) {
+    #Cards{
+        margin-top: 35px;
+        background-color: white;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.336);
+        width: 100%;
+    }
+    
 }

@@ -21,7 +21,7 @@ export default props=>{
                <i className="fa fa-arrow-down"></i> 
             </button>
             <div className={`drop ${active ? 'on' : ''}`}>
-                <button className="dropdown-item" type="button">Africa</button>
+                <button className="dropdown-item" type="button"><a href="/africa">Africa</a></button>
                 <button className="dropdown-item" type="button">America</button>
                 <button className="dropdown-item" type="button">Asia</button>
                 <button className="dropdown-item" type="button">Europa</button>

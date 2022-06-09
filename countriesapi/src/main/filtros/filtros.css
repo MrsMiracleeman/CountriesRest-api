@@ -25,6 +25,14 @@
     position: absolute;
     width: 100%;
 }
+.drop a{
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.555);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .on{
     visibility: visible;
 }

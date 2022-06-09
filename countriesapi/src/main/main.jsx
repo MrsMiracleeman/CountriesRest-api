@@ -7,7 +7,9 @@ import axios from "axios"
 
 
 export default props=>{
-
+    
+    var regiaoFilt = props.regiao
+    console.log(regiaoFilt)
         var list = []
        const [pais,setPais] = useState([])
 

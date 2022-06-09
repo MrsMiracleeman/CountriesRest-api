@@ -6,35 +6,68 @@ import './main.css'
 import axios from "axios"
 
 
+
+
 export default props=>{
     
-    var regiaoFilt = props.regiao
-    console.log(regiaoFilt)
-        var list = []
-       const [pais,setPais] = useState([])
 
+    var list = []
+    const [pais,setPais] = useState([])
+
+ 
         axios.get('https://restcountries.com/v3.1/all')
         .then(resposta=>{
-            
             filterHome(resposta.data)
-        
+
         })
 
         
         function filterHome(paises){
             
-            paises.forEach(element => {
-                if(element.name.common === "Russia" || element.name.common === "Brazil" || element.name.common === "Iceland"
-                    || element.name.common === "United States" || element.name.common === "Argentina" ||element.name.common === "Mexico" ||
-                    element.name.common === "Albania" || element.name.common === "Algeria" || element.name.common === "Cuba" || element.name.common === "Greece"
-                ){
-                    list.push(element)
-                
-                }
+            if(props.regiao === "home"){
+                paises.forEach(element => {
+                    if(element.name.common === "Russia" || element.name.common === "Brazil" || 
+                       element.name.common === "United States" || element.name.common === "Argentina" ||
+                        element.name.common === "Japan" || element.name.common === "Algeria" || element.name.common === "Cuba" || element.name.common === "Greece"
+                    ){
+                        list.push(element)
+                    
+                    }
+                });
+            }else if(props.regiao === "africa"){
+                paises.forEach(element=>{
+                    if(element.region === "Africa"){
+                        list.push(element)
+                    }
+                })
+            }else if(props.regiao === "america"){
+                paises.forEach(element=>{
+                    if(element.region === "Americas"){
+                        list.push(element)
+                    }
+                })
+            }else if(props.regiao === "europa"){
+                paises.forEach(element=>{
+                    if(element.region === "Europe"){
+                        list.push(element)
+                    }
+                })
+            }else if(props.regiao === "asia"){
+                paises.forEach(element=>{
+                    if(element.region === "Asia"){
+                        list.push(element)
+                    }
+                })
+            }else if(props.regiao === "oceania"){
+                paises.forEach(element=>{
+                    if(element.region === "Oceania"){
+                        list.push(element)
+                    }
+                })
+            }
 
-            });
-
-            if(list.length === 10){
+           
+            if(list.length != null){
                 setPais(list)
             }
         }

@@ -17,10 +17,12 @@ export default class Cards extends Component{
         }
     }
 
+
+
     render(){
 
         return(
-            <section id="Cards">
+            <section id="Cards" >
                 <div>
                     <img src={this.state.img}/>
                 </div>

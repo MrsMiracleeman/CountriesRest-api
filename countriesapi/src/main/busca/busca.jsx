@@ -6,7 +6,7 @@ export default class Busca extends Component{
     render(){
 
         return(
-        <form id="form-busca">
+        <form id="form-busca" action="">
             <div>
                 <i className="fa fa-search fa-lg"></i>
             </div>

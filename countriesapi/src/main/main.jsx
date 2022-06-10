@@ -1,26 +1,34 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Busca from "./busca/busca";
 import Cards from "./cards/cards";
 import Filtros from "./filtros/filtros";
 import './main.css'
 import axios from "axios"
+import Pais from "../pages/Pais";
 
 
 
 
 export default props=>{
-    
 
+
+    var msgError = ""
+    
+    
     var list = []
     const [pais,setPais] = useState([])
-
+    const [erro,setErro] = useState(false)
  
         axios.get('https://restcountries.com/v3.1/all')
         .then(resposta=>{
             filterHome(resposta.data)
-
+        
         })
-
+        .catch(resposta=>{
+            setErro(true)
+            msgError = resposta.message
+            console.log(msgError)
+        })
         
         function filterHome(paises){
             
@@ -31,7 +39,6 @@ export default props=>{
                         element.name.common === "Japan" || element.name.common === "Algeria" || element.name.common === "Cuba" || element.name.common === "Greece"
                     ){
                         list.push(element)
-                    
                     }
                 });
             }else if(props.regiao === "africa"){
@@ -72,7 +79,8 @@ export default props=>{
             }
         }
 
-    if(pais.length >= 0){
+
+    if(props.page === false){
         return(
             <main className="Main">
                 <div id="buscar">
@@ -84,24 +92,25 @@ export default props=>{
                 <section id="lista">
                     {pais.map((e,i)=>{
                         return(
-                            <Cards key={i} img = {e.flags.png}nome={e.name.common} populacao={e.population} regiao={e.region} capital={e.capital} />
+                            <Cards   key={i} img = {e.flags.png}nome={e.name.common} populacao={e.population} regiao={e.region} capital={e.capital} />
                         )
                     })}
                 </section>
             </main>
         )
-    }
-    // return(
-    //     <main className="Main">
-    //         <div id="buscar">
-    //             <Busca />
-    //         </div>
-    //         <div id="filtros">
-    //             <Filtros />
-    //         </div>
-    //         <section id="lista">
+    }else if(props.page === true){
+        return(
+            <div>
+                <Pais pais={props.pais}/>
+            </div>
+        )
+    }else if(erro === true){
+        return(
+            <div>
+                Erro
+            </div>
+        )
+
+        }
     
-    //         </section>
-    //     </main>
-    // )
 }

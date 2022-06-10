@@ -8,19 +8,22 @@
     justify-content: space-around;
     border: none;
     padding: 8px 0px;
-    border-radius: 5px;
     background-color: rgb(255, 255, 255);
     box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.158);
     font-size: 0.8rem;
     color: gray;
 }
+#fil{
+    border-radius: 5px;
+}
 .dropdown button i{
     color: gray;
     margin-top: 2px;
+    animation: translate 200ms ease-in-out;
 }
 .drop{
     margin-top: 5px;
-    border-radius: 10px;
+    border-radius: 5px;
     border: none;
     visibility: hidden;
     position: absolute;
@@ -37,3 +40,5 @@
 .on{
     visibility: visible;
 }
+
+

@@ -16,7 +16,7 @@ export default props=>{
 
     return(
         <div className="dropdown">
-            <button type="button" onClick={toggler}>
+            <button id="fil" type="button" onClick={toggler}>
                Filter by region 
                <i className="fa fa-arrow-down"></i> 
             </button>

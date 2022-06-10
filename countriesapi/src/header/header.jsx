@@ -7,7 +7,7 @@ export default props=>{
     return(
         <header className="Header">
             <div id="Header-title">
-                <p>Where in the world?</p>
+                <p><a href="/">Where in the world?</a></p>
             </div>
             <div>
                 <Mods />

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Pais from "../../pages/Pais";
 import './cards.css'
 
 
@@ -15,18 +16,26 @@ export default class Cards extends Component{
             regiao:props.regiao,
             capital:props.capital
         }
+        this.ativando = this.ativando.bind(this)
     }
 
+
+    ativando(){
+
+        return (
+            <Pais />
+        )
+    }
 
 
     render(){
 
         return(
-            <section id="Cards" >
+            <section id="Cards" onClick={evento => window.location.href=`pais/${this.state.nome}`}>
                 <div>
                     <img src={this.state.img}/>
                 </div>
-                <ul>
+                <ul >
                     <h6>{this.state.nome} </h6>
                     <li><strong>População: </strong>{this.state.populacao} </li>
                     <li><strong>Região: </strong> {this.state.regiao} </li>

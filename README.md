@@ -1,2 +1,2 @@
 # CountriesRest-api
- Pesquise informações sobre os países do planete Terra
+ Pesquise informações sobre os países do planeta Terra 

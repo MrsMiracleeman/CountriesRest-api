@@ -100,9 +100,10 @@ export default props=>{
         )
     }else if(props.page === true){
         return(
-            <div>
+            <main className="Main">
                 <Pais pais={props.pais}/>
-            </div>
+            </main>
+                    
         )
     }else if(erro === true){
         return(

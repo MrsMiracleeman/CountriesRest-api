@@ -8,7 +8,6 @@ import axios from "axios";
 export default props =>{
 
 
-console.log(window.location)
 var pais = window.location.pathname.slice(6)
 
 

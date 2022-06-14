@@ -8,6 +8,8 @@ import {Route, BrowserRouter } from "react-router-dom"
 import axios from 'axios'
 import { useState } from 'react';
 import Routes from './pages/routes';
+import Teste from './testes/testes';
+import Testes01 from './testes/testes01';
 
 function App() {
 
@@ -17,6 +19,8 @@ function App() {
     // .then(resposta=>{
     //   setPais(resposta.data)
     // })
+
+
 
   return (
       <div className="App">
